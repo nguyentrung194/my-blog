@@ -54,8 +54,27 @@ function QuangCao() {
       mota: 'Bánh kẹo'
     },
   ]
-  const stylesItem = { background: 'yellow', marginRight: '5px', marginLeft: '5px', marginBottom: '5px', color: 'black', width: '1000px', textAlign: 'center', lineHeight: '50px' }
-  const stylesList = {background: 'blue', width: '30%', border: '1px solid red', display: 'flex', flexWrap: 'wrap'}
+  const stylesItem = {
+    background: 'yellow',
+    marginRight: '5px',
+    marginLeft: '5px',
+    marginBottom: '5px',
+    color: 'black',
+    width: '1000px',
+    textAlign: 'center',
+    lineHeight: '50px',
+  }
+  const stylesList = {
+  background: 'blue',
+  width: '30%',
+  border: '1px solid red',
+  display: 'flex',
+  flexWrap: 'wrap',
+  border: '3px solid #00ff00',
+  height: '500px',
+  overflowX: 'hidden',
+  overflowY: 'auto',
+}
   const stylesContainer = {width: '55%', height: '50%', border: '1px solid red'}
   return (
     <div style={{display: 'flex'}}>
@@ -80,7 +99,7 @@ function QuangCao() {
         </Carousel>
       </div>
       <div style={{paddingLeft: '5%'}}>{/*Khoảng trắng thứ 2*/}</div>
-      <div style={{...stylesList, border: '3px solid #00ff00', height: '500px', overflowX: 'hidden', overflowY: 'auto' }}>
+      <div style={stylesList  } >
         <div style={{...stylesItem, marginTop: '5px'}}><h3>Mô tả các ảnh</h3></div>
         {data.map((el, i)=>{
           return (
