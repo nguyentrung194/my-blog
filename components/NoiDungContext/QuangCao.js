@@ -75,17 +75,17 @@ function QuangCao() {
   overflowX: 'hidden',
   overflowY: 'auto',
 }
-  const stylesContainer = {width: '55%', height: '50%', border: '1px solid red'}
+
   return (
-    <div style={{display: 'flex'}}>
-      <div style={{paddingLeft: '5%'}}></div> {/* Khoảng trắng đầu tiên*/}
-      <div style={stylesContainer}>
+    <div className='container' style={{ paddingBottom: '50px' }}>
+      <div className='row row-cols-3'>
+        <div className='col'>
         <Carousel activeIndex={index} onSelect={handleSelect}>
           {data.map((el, i)=>{
             return(
             <Carousel.Item>
               <img
-                style={{width: '500px', height: '500px'}}
+                style={{width: '100px', height: '400px'}}
                 className="d-block w-100"
                 src={el.img}
                 alt="First slide"
@@ -97,22 +97,8 @@ function QuangCao() {
             )
           })}
         </Carousel>
-      </div>
-      <div style={{paddingLeft: '5%'}}>{/*Khoảng trắng thứ 2*/}</div>
-      <div style={stylesList  } >
-        <div style={{...stylesItem, marginTop: '5px'}}><h3>Mô tả các ảnh</h3></div>
-        {data.map((el, i)=>{
-          return (
-            <div style={stylesItem} >
-              <div>
-              {<h4>Ảnh {i+1}</h4>}
-              </div>
-              <div>
-              {el.mota}
-              </div>
-            </div>
-          )
-        })}
+        </div>
+        <img src="11.jpg" className="col-8 d-block w-100" alt=""  style={{width: '200px', height: '400px'}}/>
       </div>
     </div>
   );

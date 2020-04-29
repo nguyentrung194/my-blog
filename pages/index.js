@@ -14,7 +14,7 @@ export default function Index() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <DieuHuong />
-      <h1 style={{textAlign: 'center'}}>Trang chủ</h1>
+      <h1 style={{textAlign: 'center', paddingBottom: '30px' }}>Trang chủ</h1>
       <NoiDung />
       <ChanTrang />
     </div>
