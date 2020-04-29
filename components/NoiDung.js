@@ -52,26 +52,25 @@ const dataCard = [
 ]
 
 const NoiDung = () => {
-    return (
-        <div>
-            
-            <div className='container'>
-                <QuangCao />
-                <div style={{ paddingBottom: '30px' }}></div>
-                <div className="row row-cols-4">
-                    {dataCard.map((el) => {
-                        return (
-                            <div className="col" >
-                                <TestComponent img={el.img} mota={el.mota} />
-                                <div style={{ paddingTop: '30px' }}></div>
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
-            <NoiBat />
+  return (
+    <div>
+      <div className='container'>
+        <QuangCao />
+        <div style={{ paddingBottom: '30px' }}></div>
+        <div className="row">
+          {dataCard.map((el) => {
+            return (
+              <div className="col-sm-12 col-md-3" >
+                <TestComponent img={el.img} mota={el.mota} />
+                <div style={{ paddingTop: '30px' }}></div>
+              </div>
+            )
+          })}
         </div>
-    );
+      </div>
+      <NoiBat />
+    </div>
+  );
 }
 
 export default NoiDung;

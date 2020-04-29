@@ -10,7 +10,7 @@ const TestComponent = (props) => {
                     <p className='card-text'>{props.mota}</p>
                     <a name="" id="" class="btn btn-primary" href="#" role="button">Thêm vào giỏ</a>
                 </div>
-            </div>
+            </div> 
         </div>
     )
 }

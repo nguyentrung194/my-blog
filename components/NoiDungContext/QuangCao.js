@@ -78,27 +78,29 @@ function QuangCao() {
 
   return (
     <div className='container' style={{ paddingBottom: '50px' }}>
-      <div className='row row-cols-3'>
-        <div className='col'>
-        <Carousel activeIndex={index} onSelect={handleSelect}>
-          {data.map((el, i)=>{
-            return(
-            <Carousel.Item>
-              <img
-                style={{width: '100px', height: '400px'}}
-                className="d-block w-100"
-                src={el.img}
-                alt="First slide"
-              />
-              <Carousel.Caption>
-                <h3>Ảnh {i+1}</h3>
-              </Carousel.Caption>
-            </Carousel.Item>
-            )
-          })}
-        </Carousel>
+      <div className='row'>
+        <div className='col-sm-12 col-md-4'>
+          <Carousel activeIndex={index} onSelect={handleSelect}>
+            {data.map((el, i)=>{
+              return(
+                <Carousel.Item>
+                  <img
+                    style={{width: '100px', height: '400px'}}
+                    className="d-block w-100"
+                    src={el.img}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption>
+                    <h3>Ảnh {i+1}</h3>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              )
+            })}
+          </Carousel>
         </div>
-        <img src="11.jpg" className="col-8 d-block w-100" alt=""  style={{width: '200px', height: '400px'}}/>
+        <div className='col-sm-12 col-md-8'> 
+          <img src="11.jpg" className="d-block w-100" alt="" style={{ height: '400px' }} />
+        </div>
       </div>
     </div>
   );
